@@ -1,0 +1,22 @@
+<div fxLayout="row" fxLayoutAlign="center center" style="min-height: 39px">
+  <button
+    (click)="click()"
+    [disabled]="disabled"
+    color="secondary"
+    mat-flat-button
+  >
+    <span
+      class="spinner-button"
+      [ngStyle]="{ visibility: loading ? 'visible' : 'hidden' }"
+    >
+      <mat-spinner [diameter]="28" [strokeWidth]="3"></mat-spinner>
+    </span>
+
+    <span [ngStyle]="{ visibility: loading ? 'hidden' : 'visible' }">
+      <mat-icon *ngIf="icone">
+        {{ icone }}
+      </mat-icon>
+      <span>{{ texto }}</span>
+    </span>
+  </button>
+</div>

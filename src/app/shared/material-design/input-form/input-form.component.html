@@ -1,0 +1,19 @@
+<div class="box-field" fxLayout="column">
+  <mat-form-field appearance="outline" color="primary">
+    <mat-label>
+      {{ label }}
+    </mat-label>
+    <input
+      #inputForm
+      [formControl]="controlName"
+      [placeholder]="placeholder || ''"
+      [readonly]="readonly"
+      [type]="type || 'text'"
+      matInput
+    />
+    <mat-hint *ngIf="info" [align]="'end'">{{ info }}</mat-hint>
+    <mat-error *ngIf="controlName.invalid">
+      {{ getErro() }}
+    </mat-error>
+  </mat-form-field>
+</div>

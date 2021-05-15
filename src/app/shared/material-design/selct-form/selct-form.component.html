@@ -1,0 +1,29 @@
+<div class="box-field" fxLayout="column">
+  <mat-form-field appearance="outline" color="primary">
+    <mat-label>
+      {{ label }}
+    </mat-label>
+    <mat-select
+      [formControl]="controlName"
+      [multiple]="multiple"
+      [disableOptionCentering]="true"
+      [placeholder]="placeholder"
+    >
+      <mat-select-trigger *ngIf="multiple">
+        {{ controlName.value?.length
+        }}{{
+          controlName.value?.length === 1
+            ? " item selecionado"
+            : " itens selecionados "
+        }}
+      </mat-select-trigger>
+      <mat-option *ngFor="let item of list" [value]="item.key">
+        {{ item.name }}
+      </mat-option>
+    </mat-select>
+    <mat-hint *ngIf="info" [align]="'end'">{{ info }}</mat-hint>
+    <mat-error *ngIf="controlName.invalid">
+      {{ getErro() }}
+    </mat-error>
+  </mat-form-field>
+</div>
