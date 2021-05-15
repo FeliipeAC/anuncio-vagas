@@ -1,0 +1,113 @@
+.card {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  box-shadow: 0px 1px 0px rgba(17, 17, 26, 0.1),
+    0px 8px 24px rgba(17, 17, 26, 0.1), 0px 16px 48px rgba(17, 17, 26, 0.1);
+  border-radius: 6px;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    transform: translate(-10px, -10px);
+    border: 1px dashed #674793;
+    z-index: -1;
+    border-radius: 6px;
+  }
+
+  .left {
+    background: #674793;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    padding: 16px;
+    color: #ffffff;
+    flex: 0 1 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.6;
+      letter-spacing: normal;
+      margin: 6px 0 12px 0;
+    }
+
+    > span {
+      font-size: 10px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.73;
+      letter-spacing: normal;
+      display: block;
+      color: #674793;
+      background: #ffffff;
+      border-radius: 9px;
+      padding: 0 8px;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.7em;
+      color: rgba(255, 255, 255, 0.72);
+    }
+  }
+
+  .right {
+    padding: 16px;
+    flex: 0 1 65%;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    > div {
+      p {
+        color: #262a2b;
+        line-height: 1.73;
+        margin: 0;
+        font-weight: 500;
+      }
+
+      > span {
+        color: #8a8a8f;
+        font-size: 12px;
+        line-height: 1.71;
+      }
+    }
+
+    .more {
+      margin-top: 24px;
+      padding-top: 12px;
+      border-top: 1px solid #e0e0e0;
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    flex-direction: column;
+
+    .left {
+      border-bottom-left-radius: 0 !important;
+      border-top-right-radius: 6px !important;
+    }
+    .right {
+      border-bottom-left-radius: 6px !important;
+      border-top-right-radius: 0 !important;
+    }
+  }
+}

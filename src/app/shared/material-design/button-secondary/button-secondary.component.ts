@@ -19,4 +19,8 @@ export class ButtonSecondaryComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  click(): void {
+    this.eventClick.emit();
+  }
 }

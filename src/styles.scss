@@ -82,3 +82,46 @@ body {
   font-family: "Inter";
   font-size: 15px;
 }
+
+.spinner-button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+// Botão primário
+.mat-flat-button.mat-primary {
+  width: 100%;
+  font-weight: 600;
+  color: #ffffff !important;
+  padding: 0 24px;
+
+  .mat-progress-spinner circle,
+  .mat-spinner circle {
+    stroke: #ffffff;
+  }
+}
+
+// Botão secundário
+.mat-flat-button.mat-secondary {
+  width: 100%;
+  font-weight: 500;
+  padding: 0 24px;
+  color: #674793 !important;
+}
+
+.technologies-chip {
+  .mat-chip-list-wrapper {
+    margin-top: 8px;
+  }
+  .mat-standard-chip {
+    font-size: 11px;
+    min-height: auto !important;
+    height: auto !important;
+    padding: 3px 8px;
+  }
+}

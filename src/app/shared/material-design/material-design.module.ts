@@ -28,7 +28,12 @@ import { InputFormComponent } from './input-form/input-form.component';
 import { SelctFormComponent } from './selct-form/selct-form.component';
 
 @NgModule({
-  declarations: [ButtonPrimaryComponent, ButtonSecondaryComponent, InputFormComponent, SelctFormComponent],
+  declarations: [
+    ButtonPrimaryComponent,
+    ButtonSecondaryComponent,
+    InputFormComponent,
+    SelctFormComponent,
+  ],
   imports: [
     CommonModule,
     // Angular Material
@@ -58,6 +63,9 @@ import { SelctFormComponent } from './selct-form/selct-form.component';
   exports: [
     // Components
     ButtonPrimaryComponent,
+    ButtonSecondaryComponent,
+    InputFormComponent,
+    SelctFormComponent,
 
     // Angular Material
     MatButtonModule,

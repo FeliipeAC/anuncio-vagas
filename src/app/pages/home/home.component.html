@@ -1,1 +1,11 @@
-<p>home works!</p>
+<section>
+  <h1>Jobs</h1>
+
+  <div class="list">
+    <ng-container *ngFor="let item of listJobs">
+      <div>
+        <app-job-card [job]="item"></app-job-card>
+      </div>
+    </ng-container>
+  </div>
+</section>
