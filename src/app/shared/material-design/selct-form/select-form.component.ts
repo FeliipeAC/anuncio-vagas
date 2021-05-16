@@ -1,6 +1,7 @@
 import { FormControl, FormGroup } from '@angular/forms';
 import { Component, Input, OnInit } from '@angular/core';
 import { IdNameModel } from '../../models/id-name-model';
+import { ErrorsFormsService } from '../../services/errors-forms.service';
 
 @Component({
   selector: 'app-select-form',
@@ -41,12 +42,21 @@ export class SelectFormComponent implements OnInit {
 
   @Input() multiple: boolean = false;
 
-  constructor() {}
+  constructor(private errorsForms: ErrorsFormsService) {}
 
   ngOnInit(): void {}
 
-  getErro(): string {
-    return '';
+  isInvalid(): boolean {
+    return (
+      this.form.get(this.controlName)!.invalid &&
+      this.form.get(this.controlName)!.touched
+    );
+  }
+
+  getError(): string {
+    return this.errorsForms.getError(
+      this.form.get(this.controlName) as FormControl
+    );
   }
 
   getTextTrigger(): string {

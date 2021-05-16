@@ -1,3 +1,4 @@
+import { ErrorsFormsService } from './../../services/errors-forms.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
@@ -38,16 +39,20 @@ export class InputFormComponent implements OnInit {
 
   @Input() readonly: boolean = false;
 
-  constructor() {}
+  constructor(private errorsForms: ErrorsFormsService) {}
 
   ngOnInit(): void {}
 
   isInvalid(): boolean {
-    return false;
-    // return this.controlName.invalid && this.controlName.touched;
+    return (
+      this.form.get(this.controlName)!.invalid &&
+      this.form.get(this.controlName)!.touched
+    );
   }
 
-  getErro(): string {
-    return '';
+  getError(): string {
+    return this.errorsForms.getError(
+      this.form.get(this.controlName) as FormControl
+    );
   }
 }

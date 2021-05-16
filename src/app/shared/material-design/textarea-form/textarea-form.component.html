@@ -14,8 +14,8 @@
       type="text"
     ></textarea>
     <mat-hint *ngIf="info" [align]="'end'">{{ info }}</mat-hint>
-    <!-- <mat-error *ngIf="controlName.invalid && controlName.touched">{{
-      getErro()
-    }}</mat-error> -->
+    <mat-error *ngIf="isInvalid()">
+      {{ getError() }}
+    </mat-error>
   </mat-form-field>
 </div>

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
+import { ErrorsFormsService } from '../../services/errors-forms.service';
 
 @Component({
   selector: 'app-textarea-form',
@@ -35,7 +36,20 @@ export class TextareaFormComponent implements OnInit {
 
   @Input() rows!: number;
 
-  constructor() {}
+  constructor(private errorsForms: ErrorsFormsService) {}
 
   ngOnInit() {}
+
+  isInvalid(): boolean {
+    return (
+      this.form.get(this.controlName)!.invalid &&
+      this.form.get(this.controlName)!.touched
+    );
+  }
+
+  getError(): string {
+    return this.errorsForms.getError(
+      this.form.get(this.controlName) as FormControl
+    );
+  }
 }

@@ -10,12 +10,6 @@
       [placeholder]="placeholder"
     >
       <mat-select-trigger *ngIf="multiple">
-        <!-- {{ form?.get(controlName).value?.length
-        }}{{
-          form?.get(controlName).value?.length === 1
-            ? " item selecionado"
-            : " itens selecionados "
-        }} -->
         {{ getTextTrigger() }}
       </mat-select-trigger>
       <mat-option *ngFor="let item of list" [value]="item">
@@ -23,8 +17,8 @@
       </mat-option>
     </mat-select>
     <mat-hint *ngIf="info" [align]="'end'">{{ info }}</mat-hint>
-    <!-- <mat-error *ngIf="controlName.invalid">
-      {{ getErro() }}
-    </mat-error> -->
+    <mat-error *ngIf="isInvalid()">
+      {{ getError() }}
+    </mat-error>
   </mat-form-field>
 </div>

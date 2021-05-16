@@ -1,3 +1,4 @@
+import { ErrorsFormsService } from './../services/errors-forms.service';
 import { TextareaFormComponent } from './textarea-form/textarea-form.component';
 import { ButtonPrimaryComponent } from './button-primary/button-primary.component';
 import { NgModule } from '@angular/core';
@@ -100,5 +101,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatTooltipModule,
     MatToolbarModule,
   ],
+  providers: [ErrorsFormsService],
 })
 export class MaterialDesignModule {}
