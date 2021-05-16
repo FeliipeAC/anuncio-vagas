@@ -11,7 +11,6 @@ export class HomeComponent implements OnInit {
     {
       name: 'Front end Developer',
       mode: 'Remote',
-      location: '',
       category: 'Front-end',
       type: 'Full-time',
       technologies: ['Angular', 'HTML/CSS', 'TypeScript'],
@@ -21,7 +20,6 @@ export class HomeComponent implements OnInit {
     {
       name: 'Fulltstack Developer',
       mode: 'Remove/Presential',
-      location: 'Salvador, BA',
       category: 'FullStack',
       type: 'Full-time',
       technologies: [
@@ -38,7 +36,6 @@ export class HomeComponent implements OnInit {
     {
       name: 'Back-end Developer',
       mode: 'Remote',
-      location: '',
       category: 'Back-end',
       type: 'Part-time',
       technologies: ['TypeScript', 'PostgreSQL', 'Node JS'],

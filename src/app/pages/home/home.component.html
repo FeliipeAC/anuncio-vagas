@@ -1,13 +1,4 @@
 <section>
-  <div class="header-page">
-    <h1 class="page-title">Jobs</h1>
-    <app-button-primary
-      texto="Create Job"
-      icone="add"
-      (eventClick)="navigateToNewJob()"
-    ></app-button-primary>
-  </div>
-
   <div class="list">
     <ng-container *ngFor="let item of listJobs">
       <div>

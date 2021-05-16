@@ -28,6 +28,7 @@ import { ButtonSecondaryComponent } from './button-secondary/button-secondary.co
 import { InputFormComponent } from './input-form/input-form.component';
 import { SelectFormComponent } from './selct-form/select-form.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatDividerModule,
     MatListModule,
     MatTooltipModule,
+    MatToolbarModule,
   ],
   exports: [
     // Components
@@ -96,6 +98,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatDividerModule,
     MatListModule,
     MatTooltipModule,
+    MatToolbarModule,
   ],
 })
 export class MaterialDesignModule {}
