@@ -1,0 +1,80 @@
+<div>
+  <div>
+    <app-input-form
+      [controlName]="'name'"
+      [form]="form"
+      [label]="'Name'"
+      fxFlex="100%"
+    >
+    </app-input-form>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+    <div fxFlex="0 1 calc(50% - 8px)">
+      <app-select-form
+        fxFlex="100"
+        controlName="category"
+        [form]="form"
+        [label]="'Category'"
+        [list]="listCategories"
+        [multiple]="false"
+      ></app-select-form>
+    </div>
+
+    <div fxFlex="0 1 calc(50% - 8px)">
+      <app-select-form
+        fxFlex="100"
+        controlName="type"
+        [form]="form"
+        [label]="'Type'"
+        [list]="listTypes"
+        [multiple]="false"
+      ></app-select-form>
+    </div>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+    <div fxFlex="0 1 calc(50% - 8px)">
+      <app-select-form
+        fxFlex="100"
+        controlName="mode"
+        [form]="form"
+        [label]="'Mode'"
+        [list]="listModes"
+        [multiple]="false"
+      ></app-select-form>
+    </div>
+
+    <div fxFlex="0 1 calc(50% - 8px)">
+      <app-input-form
+        [controlName]="'salary'"
+        [form]="form"
+        [label]="'Salary'"
+        fxFlex="100%"
+      >
+      </app-input-form>
+    </div>
+  </div>
+
+  <div>
+    <app-select-form
+      fxFlex="100"
+      controlName="technologies"
+      [form]="form"
+      [label]="'Technologies'"
+      [list]="listTechnologies"
+      [multiple]="true"
+    ></app-select-form>
+  </div>
+
+  <div>
+    <app-textarea-form
+      fxFlex="100"
+      controlName="description"
+      [form]="form"
+      [rows]="5"
+      [label]="'Description'"
+    >
+    </app-textarea-form>
+  </div>
+</div>

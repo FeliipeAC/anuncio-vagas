@@ -76,11 +76,18 @@ $anuncio-vagas-theme: mat.define-light-theme(
 html,
 body {
   height: 100%;
+  font-family: "Inter";
 }
 body {
   margin: 0;
-  font-family: "Inter";
   font-size: 15px;
+  color: #515154;
+}
+
+h1.page-title {
+  margin: 0;
+  font-size: 2.3em;
+  font-weight: 600;
 }
 
 .spinner-button {
@@ -124,4 +131,8 @@ body {
     height: auto !important;
     padding: 3px 8px;
   }
+}
+
+.mat-form-field {
+  width: 100%;
 }

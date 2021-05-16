@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-input-form',
@@ -10,7 +10,9 @@ export class InputFormComponent implements OnInit {
   /**
    * Nome do formControl no formulário
    */
-  @Input() controlName: FormControl = new FormControl();
+  @Input() controlName!: string;
+
+  @Input() form!: FormGroup;
 
   /**
    * Label referente ao campo
@@ -41,7 +43,8 @@ export class InputFormComponent implements OnInit {
   ngOnInit(): void {}
 
   isInvalid(): boolean {
-    return this.controlName.invalid && this.controlName.touched;
+    return false;
+    // return this.controlName.invalid && this.controlName.touched;
   }
 
   getErro(): string {

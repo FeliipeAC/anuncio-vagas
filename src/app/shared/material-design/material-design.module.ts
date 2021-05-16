@@ -1,3 +1,4 @@
+import { TextareaFormComponent } from './textarea-form/textarea-form.component';
 import { ButtonPrimaryComponent } from './button-primary/button-primary.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -25,17 +26,21 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ButtonSecondaryComponent } from './button-secondary/button-secondary.component';
 import { InputFormComponent } from './input-form/input-form.component';
-import { SelctFormComponent } from './selct-form/selct-form.component';
+import { SelectFormComponent } from './selct-form/select-form.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
     ButtonPrimaryComponent,
     ButtonSecondaryComponent,
     InputFormComponent,
-    SelctFormComponent,
+    SelectFormComponent,
+    TextareaFormComponent,
   ],
   imports: [
     CommonModule,
+    FlexLayoutModule,
+
     // Angular Material
     MatButtonModule,
     MatInputModule,
@@ -65,7 +70,8 @@ import { SelctFormComponent } from './selct-form/selct-form.component';
     ButtonPrimaryComponent,
     ButtonSecondaryComponent,
     InputFormComponent,
-    SelctFormComponent,
+    SelectFormComponent,
+    TextareaFormComponent,
 
     // Angular Material
     MatButtonModule,

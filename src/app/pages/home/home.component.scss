@@ -2,10 +2,12 @@ section {
   padding: 24px 0;
 }
 
-h1 {
-  margin: 0 24px 24px;
-  font-size: 2.3em;
-  font-weight: 600;
+.header-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 64px 0;
+  padding: 0 24px;
 }
 
 .list {

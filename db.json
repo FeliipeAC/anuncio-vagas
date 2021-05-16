@@ -1,0 +1,130 @@
+{
+  "categories": [
+    {
+      "id": "back_end",
+      "name": "Back-end"
+    },
+    {
+      "id": "front_end",
+      "name": "Front-end"
+    },
+    {
+      "id": "fullstack",
+      "name": "Full Stack"
+    },
+    {
+      "id": "mobile",
+      "name": "Mobile"
+    }
+  ],
+  "types": [
+    {
+      "id": "fulltime",
+      "name": "Full time"
+    },
+    {
+      "id": "part_time",
+      "name": "Part-time"
+    }
+  ],
+  "modes": [
+    {
+      "id": "presential",
+      "name": "Presential"
+    },
+    {
+      "id": "remote",
+      "name": "Remote"
+    },
+    {
+      "id": "remote_presential",
+      "name": "Remove/Presential"
+    }
+  ],
+  "technologies": [
+    {
+      "id": "angular",
+      "name": "Angular"
+    },
+    {
+      "id": "react",
+      "name": "React"
+    },
+    {
+      "id": "vue",
+      "name": "Vue JS"
+    },
+    {
+      "id": "typescript",
+      "name": "TypeScript"
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript"
+    },
+    {
+      "id": "java",
+      "name": "Java"
+    },
+    {
+      "id": "python",
+      "name": "Python"
+    },
+    {
+      "id": "nodejs",
+      "name": "Node JS"
+    },
+    {
+      "id": "html",
+      "name": "HTML"
+    },
+    {
+      "id": "css",
+      "name": "CSS"
+    },
+    {
+      "id": "postgresql",
+      "name": "PostgreSQL"
+    },
+    {
+      "id": "ruby",
+      "name": "Ruby"
+    },
+    {
+      "id": "php",
+      "name": "PHP"
+    },
+    {
+      "id": "c#",
+      "name": "C#"
+    },
+    {
+      "id": ".net",
+      "name": ".NET"
+    },
+    {
+      "id": "flutter",
+      "name": "Flutter"
+    },
+    {
+      "id": "android",
+      "name": "Android"
+    },
+    {
+      "id": "dart",
+      "name": "Dart"
+    },
+    {
+      "id": "kotlin",
+      "name": "Kotlin"
+    },
+    {
+      "id": "swift",
+      "name": "Swift"
+    },
+    {
+      "id": "ios",
+      "name": "iOS"
+    }
+  ]
+}

@@ -1,17 +1,19 @@
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Component, Input, OnInit } from '@angular/core';
-import { KeyNameModel } from '../../models/key-name-model';
+import { IdNameModel } from '../../models/id-name-model';
 
 @Component({
-  selector: 'app-selct-form',
-  templateUrl: './selct-form.component.html',
-  styleUrls: ['./selct-form.component.scss'],
+  selector: 'app-select-form',
+  templateUrl: './select-form.component.html',
+  styleUrls: ['./select-form.component.scss'],
 })
-export class SelctFormComponent implements OnInit {
+export class SelectFormComponent implements OnInit {
   /**
    * Nome do formControl no formulário
    */
-  @Input() controlName: FormControl = new FormControl();
+  @Input() controlName!: string;
+
+  @Input() form!: FormGroup;
 
   /**
    * Label referente ao campo
@@ -33,7 +35,7 @@ export class SelctFormComponent implements OnInit {
    */
   @Input() erro: string = '';
 
-  @Input() list: KeyNameModel[] = [];
+  @Input() list: IdNameModel[] = [];
 
   @Input() readonly: boolean = false;
 
@@ -46,7 +48,10 @@ export class SelctFormComponent implements OnInit {
   getErro(): string {
     return '';
   }
-  isInvalid(): boolean {
-    return this.controlName.invalid && this.controlName.touched;
+
+  getTextTrigger(): string {
+    const count = this.form ? this.form.get(this.controlName)!.value.length : 0;
+    const txt = count === 1 ? ' selected item' : ' selected items';
+    return `${count} ${txt}`;
   }
 }

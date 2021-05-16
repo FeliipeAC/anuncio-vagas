@@ -12,11 +12,14 @@
       <mat-spinner [diameter]="28" [strokeWidth]="3"></mat-spinner>
     </span>
 
-    <span [ngStyle]="{ visibility: loading ? 'hidden' : 'visible' }">
-      <mat-icon *ngIf="icone">
-        {{ icone }}
+    <span
+      [ngStyle]="{ visibility: loading ? 'hidden' : 'visible' }"
+      fxLayout="row" fxLayoutAlign="center center"
+    >
+      <mat-icon *ngIf="icon" style="margin-right: 4px">
+        {{ icon }}
       </mat-icon>
-      <span>{{ texto }}</span>
+      <span>{{ text }}</span>
     </span>
   </button>
 </div>
