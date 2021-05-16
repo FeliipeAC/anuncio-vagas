@@ -1,4 +1,4 @@
-<div>
+<div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="16px">
   <div>
     <app-input-form
       [controlName]="'name'"
@@ -12,11 +12,13 @@
   <div
     fxLayout="row wrap"
     fxLayoutAlign="start center"
-    fxLayoutGap.gt-xs="16px"
+    fxLayout.xs="column"
+    fxLayoutAlign.xs="start stretch"
+    fxLayoutGap="16px"
   >
-    <div fxFlex="0 1 calc(50% - 8px)" fxFlex.xs="0 1 100%">
+    <div fxFlex="0 1 calc(50% - 8px)" fxFlex.xs="0 1 auto">
       <app-select-form
-        fxFlex="100"
+        fxFlex="100%"
         controlName="category"
         [form]="form"
         [label]="'Category'"
@@ -25,9 +27,9 @@
       ></app-select-form>
     </div>
 
-    <div fxFlex="0 1 calc(50% - 8px)" fxFlex.xs="0 1 100%">
+    <div fxFlex="0 1 calc(50% - 8px)" fxFlex.xs="0 1 auto">
       <app-select-form
-        fxFlex="100"
+        fxFlex="100%"
         controlName="type"
         [form]="form"
         [label]="'Type'"
@@ -40,11 +42,13 @@
   <div
     fxLayout="row wrap"
     fxLayoutAlign="start center"
-    fxLayoutGap.gt-xs="16px"
+    fxLayout.xs="column"
+    fxLayoutAlign.xs="start stretch"
+    fxLayoutGap="16px"
   >
-    <div fxFlex="0 1 calc(50% - 8px)" fxFlex.xs="0 1 100%">
+    <div fxFlex="0 1 calc(50% - 8px)" fxFlex.xs="0 1 auto">
       <app-select-form
-        fxFlex="100"
+        fxFlex="100%"
         controlName="mode"
         [form]="form"
         [label]="'Mode'"
@@ -53,7 +57,7 @@
       ></app-select-form>
     </div>
 
-    <div fxFlex="0 1 calc(50% - 8px)" fxFlex.xs="0 1 100%">
+    <div fxFlex="0 1 calc(50% - 8px)" fxFlex.xs="0 1 auto">
       <app-select-form
         [controlName]="'salary'"
         [form]="form"
@@ -68,11 +72,13 @@
   <div
     fxLayout="row wrap"
     fxLayoutAlign="start center"
-    fxLayoutGap.gt-xs="16px"
+    fxLayout.xs="column"
+    fxLayoutAlign.xs="start stretch"
+    fxLayoutGap="16px"
   >
-    <div fxFlex="0 1 calc(50% - 8px)" fxFlex.xs="0 1 100%">
+    <div fxFlex="0 1 calc(50% - 8px)" fxFlex.xs="0 1 auto">
       <app-select-form
-        fxFlex="100"
+        fxFlex="100%"
         controlName="technologies"
         [form]="form"
         [label]="'Technologies'"
@@ -81,9 +87,9 @@
       ></app-select-form>
     </div>
 
-    <div fxFlex="0 1 calc(50% - 8px)" fxFlex.xs="0 1 100%">
+    <div fxFlex="0 1 calc(50% - 8px)" fxFlex.xs="0 1 auto">
       <app-select-form
-        fxFlex="100"
+        fxFlex="100%"
         controlName="companies"
         [form]="form"
         [label]="'Companies'"
