@@ -37,4 +37,18 @@ export class JobService {
       .pipe(map((data) => data as IdNameModel[]))
       .toPromise();
   }
+
+  getListCompanies() {
+    return this.http
+      .get(`${environment.baseUrl}/companies`)
+      .pipe(map((data) => data as IdNameModel[]))
+      .toPromise();
+  }
+
+  getListSalaries() {
+    return this.http
+      .get(`${environment.baseUrl}/salaries`)
+      .pipe(map((data) => data as IdNameModel[]))
+      .toPromise();
+  }
 }

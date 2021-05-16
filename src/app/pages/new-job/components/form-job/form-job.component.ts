@@ -14,6 +14,8 @@ export class FormJobComponent implements OnInit {
   listTypes: IdNameModel[] = [];
   listModes: IdNameModel[] = [];
   listTechnologies: IdNameModel[] = [];
+  listCompanies: IdNameModel[] = [];
+  listSalaries: IdNameModel[] = [];
 
   constructor(private jobService: JobService) {}
 
@@ -23,12 +25,16 @@ export class FormJobComponent implements OnInit {
       this.jobService.getListModes(),
       this.jobService.getListTechnologies(),
       this.jobService.getListTypes(),
+      this.jobService.getListCompanies(),
+      this.jobService.getListSalaries(),
     ])
-      .then(([categories, modes, technologies, types]) => {
+      .then(([categories, modes, technologies, types, companies, salaries]) => {
         this.listCategories = categories;
         this.listTypes = types;
         this.listModes = modes;
         this.listTechnologies = technologies;
+        this.listCompanies = companies;
+        this.listSalaries = salaries;
       })
       .catch((err) => {
         console.error('error retrieving lists: ', err);

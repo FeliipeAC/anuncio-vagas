@@ -18,7 +18,7 @@
         }} -->
         {{ getTextTrigger() }}
       </mat-select-trigger>
-      <mat-option *ngFor="let item of list" [value]="item.id">
+      <mat-option *ngFor="let item of list" [value]="item">
         {{ item.name }}
       </mat-option>
     </mat-select>

@@ -23,6 +23,7 @@ export class NewJobComponent implements OnInit {
       technologies: new FormControl('', Validators.required),
       description: new FormControl('', Validators.required),
       salary: new FormControl('', Validators.required),
+      companies: new FormControl('', Validators.required),
     });
   }
 

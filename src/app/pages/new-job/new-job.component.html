@@ -11,7 +11,10 @@
         style="margin-top: 24px"
       >
         <app-button-secondary text="Cancel"></app-button-secondary>
-        <app-button-primary text="Save"></app-button-primary>
+        <app-button-primary
+          text="Save"
+          [disabled]="formNewJob.invalid"
+        ></app-button-primary>
       </div>
     </div>
   </div>

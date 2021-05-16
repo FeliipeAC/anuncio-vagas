@@ -126,5 +126,53 @@
       "id": "ios",
       "name": "iOS"
     }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "Company 1"
+    },
+    {
+      "id": "2",
+      "name": "Company 2"
+    },
+    {
+      "id": "3",
+      "name": "Company 3"
+    },
+    {
+      "id": "4",
+      "name": "Company 4"
+    },
+    {
+      "id": "5",
+      "name": "Company 5"
+    },
+    {
+      "id": "6",
+      "name": "Company 6"
+    }
+  ],
+  "salaries": [
+    {
+      "id": "1",
+      "name": "$1000 to $2000"
+    },
+    {
+      "id": "2",
+      "name": "$2000 to $3000"
+    },
+    {
+      "id": "3",
+      "name": "$3000 to $4000"
+    },
+    {
+      "id": "4",
+      "name": "$4000 to $5000"
+    },
+    {
+      "id": "5",
+      "name": "More than $5000"
+    }
   ]
 }
