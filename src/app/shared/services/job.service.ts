@@ -68,4 +68,10 @@ export class JobService {
       .pipe(map((data) => data as IdNameModel[]))
       .toPromise();
   }
+  getListLevels() {
+    return this.http
+      .get(`${environment.baseUrl}/levels`)
+      .pipe(map((data) => data as IdNameModel[]))
+      .toPromise();
+  }
 }

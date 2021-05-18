@@ -33,6 +33,7 @@ export class NewJobComponent implements OnInit {
       mode: new FormControl('', Validators.required),
       location: new FormControl(''),
       technologies: new FormControl('', Validators.required),
+      level: new FormControl('', Validators.required),
       description: new FormControl('', [
         Validators.required,
         Validators.minLength(3),
@@ -52,7 +53,6 @@ export class NewJobComponent implements OnInit {
     this.jobService
       .addJob(job)
       .then((res) => {
-        console.log('saved: ', res);
         this.success();
       })
       .catch((err) => {

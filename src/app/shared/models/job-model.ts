@@ -6,6 +6,7 @@ export interface JobModel {
   companies: IdNameModel[];
   type: IdNameModel;
   mode: IdNameModel;
+  level: IdNameModel;
   salary: IdNameModel;
   technologies: IdNameModel[];
   id: number;

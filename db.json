@@ -41,6 +41,20 @@
       "name": "Remote/Presential"
     }
   ],
+  "levels": [
+    {
+      "id": "junior",
+      "name": "Junior Analyst"
+    },
+    {
+      "id": "analyst",
+      "name": "Analyst"
+    },
+    {
+      "id": "senior",
+      "name": "Senior Analyst"
+    }
+  ],
   "technologies": [
     {
       "id": "angular",
@@ -179,8 +193,8 @@
     {
       "name": "Front-end Developer",
       "category": {
-        "id": "back_end",
-        "name": "Back-end"
+        "id": "front_end",
+        "name": "Front-end"
       },
       "type": {
         "id": "fulltime",
@@ -189,6 +203,10 @@
       "mode": {
         "id": "presential",
         "name": "Presential"
+      },
+      "level": {
+        "id": "senior",
+        "name": "Senior Analyst"
       },
       "location": "",
       "technologies": [
@@ -242,6 +260,77 @@
       ],
       "created": 1621305935384,
       "id": 1
+    },
+    {
+      "name": "Fullstack Developer",
+      "category": {
+        "id": "fullstack",
+        "name": "Full Stack"
+      },
+      "type": {
+        "id": "fulltime",
+        "name": "Full time"
+      },
+      "mode": {
+        "id": "remote_presential",
+        "name": "Remote/Presential"
+      },
+      "location": "",
+      "technologies": [
+        {
+          "id": "react",
+          "name": "React"
+        },
+        {
+          "id": "typescript",
+          "name": "TypeScript"
+        },
+        {
+          "id": "javascript",
+          "name": "JavaScript"
+        },
+        {
+          "id": "java",
+          "name": "Java"
+        },
+        {
+          "id": "python",
+          "name": "Python"
+        },
+        {
+          "id": "nodejs",
+          "name": "Node JS"
+        },
+        {
+          "id": "html",
+          "name": "HTML"
+        },
+        {
+          "id": "css",
+          "name": "CSS"
+        }
+      ],
+      "level": {
+        "id": "senior",
+        "name": "Senior Analyst"
+      },
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam enim leo, eleifend ut metus non, consectetur finibus mauris. Ut at molestie nisi, sed elementum nibh. Nulla facilisi.",
+      "salary": {
+        "id": "5",
+        "name": "More than $5000"
+      },
+      "companies": [
+        {
+          "id": "5",
+          "name": "Company 5"
+        },
+        {
+          "id": "6",
+          "name": "Company 6"
+        }
+      ],
+      "created": 1621306729072,
+      "id": 2
     }
   ]
 }
