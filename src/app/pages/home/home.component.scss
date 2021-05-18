@@ -34,3 +34,12 @@ section {
     }
   }
 }
+
+.empty {
+  max-width: 540px;
+  background: url("/assets/images/empty.svg") no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 320px;
+  margin: 50px auto;
+}

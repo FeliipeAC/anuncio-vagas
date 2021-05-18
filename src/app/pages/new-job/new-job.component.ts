@@ -47,7 +47,7 @@ export class NewJobComponent implements OnInit {
 
   save(): void {
     const job: JobModel = this.formNewJob.value;
-    job.created = moment().unix();
+    job.created = moment().valueOf();
 
     this.jobService
       .addJob(job)

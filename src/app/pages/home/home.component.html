@@ -17,11 +17,17 @@
       ></app-select-form>
     </div>
   </div>
-  <div class="list">
-    <ng-container *ngFor="let item of filtredList$ | async">
-      <div>
-        <app-job-card [job]="item"></app-job-card>
-      </div>
-    </ng-container>
-  </div>
+  <ng-container *ngIf="filtredList$ | async as listJobs">
+    <div class="list" *ngIf="listJobs.length > 0; else emptyList">
+      <ng-container *ngFor="let item of listJobs">
+        <div>
+          <app-job-card [job]="item"></app-job-card>
+        </div>
+      </ng-container>
+    </div>
+
+    <ng-template #emptyList>
+      <div class="empty"></div>
+    </ng-template>
+  </ng-container>
 </section>
