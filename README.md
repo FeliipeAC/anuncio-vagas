@@ -1,27 +1,70 @@
-# AnuncioVagas
+<h1 style="text-align: center">Anúncio Vagas</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
+O projeto consiste na exibição e cadastrado de anúncios de vagas.
+### Como funciona
 
-## Development server
+A aplicação possui as seguintes páginas:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Lista em cards dos anúncios
+- Cadastro de um novo anúncio
 
-## Code scaffolding
+A simulação do back-end é feito atráves do [JSON-SERVER](https://github.com/typicode/json-server "JSON-SERVER") hospedado no Heroku.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+O projeto poderá ser encontrado em [Anuncio Vagas Api](https://github.com/FeliipeAC/anuncio-vagas-api).
 
-## Build
+### Pré-requisitos
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 
-## Running unit tests
+- [Git](https://git-scm.com)
+- [Node.js](https://nodejs.org/en/).
+- [Angular/CLI](https://angular.io/cli)
+- [JSON-SERVER](https://github.com/typicode/json-server)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-## Running end-to-end tests
+### Executando o projeto
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice.
+Acesse [Anúncio Vagas](https://anuncio-vagas.herokuapp.com/home)
 
-## Further help
+Ou execute localmente
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+# Clone este repositório
+$ git clone <https://github.com/FeliipeAC/anuncio-vagas>
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd anuncio-vagas
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+$ ng serve
+
+# Executar o JSON-SERVER localmente
+$ json-server --watch db.json
+```
+
+Caso tenha executado o json-server localmente ele rodará na porta:4300 - acesse 
+<http://localhost:3000>. 
+
+`Lembre-se de alterar a URL da API no arquivo de environment.`
+
+A aplicação iniciará na porta:4200 - acesse <http://localhost:4200>
+
+### Executando teste unitários
+
+Execute `ng test` para realizar testes unitários via [Karma](https://karma-runner.github.io).
+
+### Executando testes end-to-end
+
+Execute `ng e2e` para realizar testes end-to-end via [Protractor](http://www.protractortest.org/).
+
+### Autor
+
+ <img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4E03AQE5c1YW999-mQ/profile-displayphoto-shrink_200_200/0/1572272493097?e=1625097600&v=beta&t=NngHf0HTr1M7L0YBMsU2IGpe4_QWu9BY3106XdAzvhs" width="100px;" alt=""/>
+ <br />
+ <sub><b>Felipe Andrade</b></sub></a>
+
+[![Linkedin Badge](https://img.shields.io/badge/-Felipe%20Andrade-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/felipe-ac/)](https://www.linkedin.com/in/felipe-ac/)
