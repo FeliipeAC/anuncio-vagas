@@ -14,6 +14,7 @@
         <app-button-primary
           text="Save"
           [disabled]="formNewJob.invalid"
+          (eventClick)="save()"
         ></app-button-primary>
       </div>
     </div>

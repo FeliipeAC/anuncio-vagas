@@ -1,3 +1,4 @@
+import { JobModel } from './../models/job-model';
 import { IdNameModel } from './../models/id-name-model';
 import { environment } from './../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
@@ -9,6 +10,16 @@ import { map } from 'rxjs/operators';
 })
 export class JobService {
   constructor(private http: HttpClient) {}
+
+  addJob(job: any) {
+    return this.http.post(`${environment.baseUrl}/jobs`, job).toPromise();
+  }
+
+  getListJobs() {
+    return this.http
+      .get(`${environment.baseUrl}/jobs`)
+      .pipe(map((res) => res as JobModel[]));
+  }
 
   getListCategories() {
     return this.http

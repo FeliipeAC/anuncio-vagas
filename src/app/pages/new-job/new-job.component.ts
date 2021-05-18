@@ -1,3 +1,5 @@
+import { JobModel } from './../../shared/models/job-model';
+import { JobService } from './../../shared/services/job.service';
 import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
@@ -5,6 +7,7 @@ import {
   FormControl,
   Validators,
 } from '@angular/forms';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-new-job',
@@ -13,7 +16,11 @@ import {
 })
 export class NewJobComponent implements OnInit {
   formNewJob: FormGroup;
-  constructor(private formBuilder: FormBuilder) {
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private jobService: JobService
+  ) {
     this.formNewJob = this.formBuilder.group({
       name: new FormControl('', [Validators.required, Validators.minLength(3)]),
       category: new FormControl('', Validators.required),
@@ -32,4 +39,18 @@ export class NewJobComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  save(): void {
+    const job: JobModel = this.formNewJob.value;
+    job.created = moment().unix();
+
+    this.jobService
+      .addJob(job)
+      .then((res) => {
+        console.log('saved: ', res);
+      })
+      .catch((err) => {
+        console.error('error: ', err);
+      });
+  }
 }

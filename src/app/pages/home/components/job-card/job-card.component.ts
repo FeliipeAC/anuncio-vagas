@@ -1,3 +1,4 @@
+import { JobModel } from './../../../../shared/models/job-model';
 import { Component, Input, OnInit } from '@angular/core';
 import * as moment from 'moment';
 
@@ -7,7 +8,7 @@ import * as moment from 'moment';
   styleUrls: ['./job-card.component.scss'],
 })
 export class JobCardComponent implements OnInit {
-  @Input() job: any = null;
+  @Input() job!: JobModel;
 
   constructor() {}
 
