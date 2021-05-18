@@ -1,6 +1,24 @@
 <section class="animate__animated animate__fadeIn">
+  <div
+    class="filter"
+    fxLayout="row"
+    fxLayoutAlign="start baseline"
+    fxLayoutGap="12px"
+  >
+    <span>Filter by:</span>
+    <div>
+      <app-select-form
+        fxFlex="100%"
+        controlName="companies"
+        [form]="formFilter"
+        [label]="'Select a company'"
+        [list]="listCompanies"
+        [multiple]="false"
+      ></app-select-form>
+    </div>
+  </div>
   <div class="list">
-    <ng-container *ngFor="let item of listJobs">
+    <ng-container *ngFor="let item of filtredList$ | async">
       <div>
         <app-job-card [job]="item"></app-job-card>
       </div>

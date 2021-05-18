@@ -23,7 +23,6 @@ export class JobDetailsComponent implements OnInit {
       .toPromise()
       .then((res) => {
         this.job = res;
-        console.log(this.job);
       })
       .catch((err) => {
         console.error(err);

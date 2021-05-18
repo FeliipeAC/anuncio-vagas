@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { JobCardComponent } from './components/job-card/job-card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 const ROUTES: Routes = [
   {
@@ -21,6 +22,7 @@ const ROUTES: Routes = [
     RouterModule.forChild(ROUTES),
     MaterialDesignModule,
     HttpClientModule,
+    FlexLayoutModule,
   ],
   providers: [JobService],
 })

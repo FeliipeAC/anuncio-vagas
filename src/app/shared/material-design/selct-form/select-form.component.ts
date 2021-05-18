@@ -1,6 +1,6 @@
+import { IdNameModel } from './../../models/id-name-model';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Component, Input, OnInit } from '@angular/core';
-import { IdNameModel } from '../../models/id-name-model';
 import { ErrorsFormsService } from '../../services/errors-forms.service';
 
 @Component({
@@ -63,5 +63,9 @@ export class SelectFormComponent implements OnInit {
     const count = this.form ? this.form.get(this.controlName)!.value.length : 0;
     const txt = count === 1 ? ' selected item' : ' selected items';
     return `${count} ${txt}`;
+  }
+
+  compareFn(option: IdNameModel, selected: IdNameModel): boolean {
+    return option.id === selected.id;
   }
 }

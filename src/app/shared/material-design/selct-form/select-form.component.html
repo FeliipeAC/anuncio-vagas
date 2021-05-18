@@ -6,6 +6,7 @@
     <mat-select
       [formControlName]="controlName"
       [multiple]="multiple"
+      [compareWith]="compareFn"
       [disableOptionCentering]="true"
       [placeholder]="placeholder"
     >
