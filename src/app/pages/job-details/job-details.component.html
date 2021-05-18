@@ -1,0 +1,81 @@
+<section class="animate__animated animate__fadeIn">
+  <div class="container" *ngIf="job">
+    <div fxLayout="column" fxLayoutAlign="start start">
+      <span class="category">{{ job.category.name }}</span>
+      <h1 class="page-title">{{ job.name }}</h1>
+    </div>
+
+    <div
+      style="margin-top: 48px"
+      fxLayout="column"
+      fxLayoutAlign="start stretch"
+      fxLayoutGap="24px"
+    >
+      <div
+        fxLayout="row wrap"
+        fxLayoutAlign="space-between center"
+        fxLayoutGap="12px"
+      >
+        <div class="item">
+          <span>Type</span>
+          <p>{{ job.type.name }}</p>
+        </div>
+        <div class="item">
+          <span>Mode</span>
+          <p>{{ job.mode.name }}</p>
+        </div>
+        <div class="item">
+          <span>Salary</span>
+          <p>{{ job.salary.name }}</p>
+        </div>
+      </div>
+
+      <div
+        fxLayout="row"
+        fxLayoutAlign="space-between center"
+        fxLayoutGap="12px"
+      >
+        <div class="item">
+          <span>Technologies</span>
+          <mat-chip-list class="technologies-chip">
+            <mat-chip
+              *ngFor="let item of job.technologies"
+              color="primary"
+              selected
+            >
+              {{ item.name }}
+            </mat-chip>
+          </mat-chip-list>
+        </div>
+      </div>
+
+      <div
+        fxLayout="row"
+        fxLayoutAlign="space-between center"
+        fxLayoutGap="12px"
+      >
+        <div class="item">
+          <span>Description</span>
+          <p>{{ job.description }}</p>
+        </div>
+      </div>
+
+      <div>
+        <mat-accordion [displayMode]="'flat'">
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title> Companies with this jobs </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div>
+              <mat-list role="list">
+                <ng-container *ngFor="let item of job.companies">
+                  <mat-list-item role="listitem">{{ item.name }}</mat-list-item>
+                </ng-container>
+              </mat-list>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </div>
+  </div>
+</section>

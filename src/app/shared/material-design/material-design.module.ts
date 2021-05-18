@@ -30,6 +30,7 @@ import { InputFormComponent } from './input-form/input-form.component';
 import { SelectFormComponent } from './selct-form/select-form.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatListModule,
     MatTooltipModule,
     MatToolbarModule,
+    MatExpansionModule
   ],
   exports: [
     // Components
@@ -100,6 +102,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatListModule,
     MatTooltipModule,
     MatToolbarModule,
+    MatExpansionModule
   ],
   providers: [ErrorsFormsService],
 })

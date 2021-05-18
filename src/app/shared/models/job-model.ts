@@ -2,9 +2,8 @@ import { IdNameModel } from './id-name-model';
 export interface JobModel {
   name: string;
   description: string;
-  location: string;
   category: IdNameModel;
-  companies: IdNameModel;
+  companies: IdNameModel[];
   type: IdNameModel;
   mode: IdNameModel;
   salary: IdNameModel;

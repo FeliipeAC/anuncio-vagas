@@ -15,6 +15,12 @@ export class JobService {
     return this.http.post(`${environment.baseUrl}/jobs`, job).toPromise();
   }
 
+  getJob(id: string) {
+    return this.http
+      .get(`${environment.baseUrl}/jobs/${id}`)
+      .pipe(map((res) => res as JobModel));
+  }
+
   getListJobs() {
     return this.http
       .get(`${environment.baseUrl}/jobs`)

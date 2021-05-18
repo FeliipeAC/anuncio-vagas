@@ -13,6 +13,13 @@ const routes: Routes = [
       import('./pages/new-job/new-job.module').then((m) => m.NewJobModule),
   },
   {
+    path: 'job-details',
+    loadChildren: () =>
+      import('./pages/job-details/job-details.module').then(
+        (m) => m.JobDetailsModule
+      ),
+  },
+  {
     path: '**',
     redirectTo: 'home',
     pathMatch: 'full',
