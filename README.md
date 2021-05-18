@@ -46,7 +46,7 @@ $ ng serve
 $ json-server --watch db.json
 ```
 
-Caso tenha executado o json-server localmente ele rodará na porta:4300 - acesse 
+Caso tenha executado o json-server localmente ele rodará na porta:3000 - acesse 
 <http://localhost:3000>. 
 
 `Lembre-se de alterar a URL da API no arquivo de environment.`
