@@ -1,3 +1,4 @@
+import { DialogModule } from './../../shared/dialog/dialog.module';
 import { JobService } from './../../shared/services/job.service';
 import { MaterialDesignModule } from './../../shared/material-design/material-design.module';
 import { Routes, RouterModule } from '@angular/router';
@@ -23,6 +24,7 @@ const ROUTES: Routes = [
     MaterialDesignModule,
     FlexLayoutModule,
     HttpClientModule,
+    DialogModule,
   ],
   providers: [JobService],
 })

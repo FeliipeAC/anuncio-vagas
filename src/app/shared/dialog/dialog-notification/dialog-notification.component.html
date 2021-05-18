@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>{{ data.title }}</h1>
+<div mat-dialog-content>
+  <p [innerHTML]="data.text"></p>
+</div>
+<div
+  fxLayout.xs="column-reverse"
+  fxLayoutAlign.xs="start stretch"
+  fxLayout.gt-xs="row"
+  [fxLayoutAlign.gt-xs]="data.buttonSecondary ? 'end center' : 'center center'"
+  fxLayoutGap="16px"
+>
+  <app-button-secondary
+    *ngIf="data.buttonSecondary"
+    (eventClick)="close()"
+    [disabled]="false"
+    [text]="data.buttonSecondary"
+  >
+  </app-button-secondary>
+
+  <app-button-primary (eventClick)="close(true)" [text]="data.buttonPrimary">
+  </app-button-primary>
+</div>

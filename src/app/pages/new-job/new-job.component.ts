@@ -1,3 +1,4 @@
+import { DialogService } from './../../shared/dialog/dialog.service';
 import { JobModel } from './../../shared/models/job-model';
 import { JobService } from './../../shared/services/job.service';
 import { Component, OnInit } from '@angular/core';
@@ -8,6 +9,8 @@ import {
   Validators,
 } from '@angular/forms';
 import * as moment from 'moment';
+import { DialogNotificationModel } from 'src/app/shared/models/dialog-notification-model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-job',
@@ -19,7 +22,9 @@ export class NewJobComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private jobService: JobService
+    private jobService: JobService,
+    private dialogService: DialogService,
+    private router: Router
   ) {
     this.formNewJob = this.formBuilder.group({
       name: new FormControl('', [Validators.required, Validators.minLength(3)]),
@@ -48,9 +53,37 @@ export class NewJobComponent implements OnInit {
       .addJob(job)
       .then((res) => {
         console.log('saved: ', res);
+        this.success();
       })
       .catch((err) => {
         console.error('error: ', err);
+        this.error();
       });
+  }
+
+  success(): void {
+    const alert: DialogNotificationModel = {
+      title: 'Success!',
+      text: 'The job was successfully registered!',
+      buttonPrimary: 'Ok. Go to Home',
+      disableClose: true,
+    };
+
+    this.dialogService.notification(alert).subscribe(() => {
+      this.router.navigateByUrl('/home');
+    });
+  }
+
+  error(): void {
+    const alert: DialogNotificationModel = {
+      title: 'Ops! Sorry.',
+      text: 'Something went wrong. Try again.',
+      buttonPrimary: 'Ok',
+      disableClose: true,
+    };
+
+    this.dialogService.notification(alert).subscribe(() => {
+      this.router.navigateByUrl('/home');
+    });
   }
 }
